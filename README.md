@@ -17,8 +17,5 @@ Para Executar os testes informados será necessário:<br>
 9- Selecionar E2E (assistida)<br>
 10-Executar o teste desejado clicando sobre a feature (assistida)<br>
 <br>
-Considerações:<br>
-<br>
-O teste de Api (atualizarImagemProduto.feature) não foi realizado no mesmo formato, apesar de ser possível<br>
-Não foi possível realizar o cadastro do usuário para atualizarImagemProduto.feature<br>
+
 
