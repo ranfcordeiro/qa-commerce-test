@@ -13,7 +13,7 @@ Para Executar os testes informados será necessário:<br>
 5- Executar o comando: npm install -D cypress-xpath (instalar xpath)<br>
 6- Executar o comando: npm install cypress-cucumber-preprocessor --save-dev (instalar cucumber)<br>
 7- Abrir o projeto no qa-commerce-test no Visual Code<br>
-8- Executar o comando: npm test (execução assistida) ou npm run runtest (execução não assistida)<br>
+8- Executar o comando no terminal: npm test (execução assistida) ou npm run runtest (execução não assistida)<br>
 9- Selecionar E2E (assistida)<br>
 10-Executar o teste desejado clicando sobre a feature (assistida)<br>
 <br>
