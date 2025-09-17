@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { eCarrinho } from "../Elements/eCarrinho"
+import { eCarrinho } from "../elements/eCarrinho"
 
 
 class carrinho {
@@ -34,5 +34,35 @@ class carrinho {
         })
     }
 
+    validaValorTotalDosProdutos(valor){
+         cy.wait(2000)
+         cy.get(eCarrinho.labels.lblValorTotalDaCompra).then($val => {
+            let textoObtido = $val[0].innerText
+            expect(textoObtido).to.eq(valor)
+        })
+    }
+
+    validaValorDoFrete(valor){
+         cy.wait(2000)
+         cy.get(eCarrinho.labels.lblValorDoFrete).then($val => {
+            let textoObtido = $val[0].innerText
+            expect(textoObtido).to.eq(valor)
+        })
+    }
+
+    validaValorTotalComFrete(valor){
+         cy.wait(2000)
+         cy.get(eCarrinho.labels.lblTotalComFrete).then($val => {
+            let textoObtido = $val[0].innerText
+            expect(textoObtido).to.eq(valor)
+        })
+    }
+
+    clicaIrParaCheckout(){
+        cy.wait(2000)
+        cy.get(eCarrinho.botoes.btnCheckout)
+        .should('exist')
+        .click()
+    }
 }
 export default new carrinho

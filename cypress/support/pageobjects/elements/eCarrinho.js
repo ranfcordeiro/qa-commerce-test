@@ -3,7 +3,8 @@ export class eCarrinho {
 
     static botoes = {
 
-       btnMenuCarrinho: ":nth-child(2) > .nav-link",
+     btnCheckout: '#totals > .btn',
+
 
     }
 
@@ -13,6 +14,9 @@ export class eCarrinho {
         lblPreco: '.cart-item > :nth-child(2)',
         lblQuantidade: '.cart-item > :nth-child(3)',
         lblTotal: '.cart-item > :nth-child(4)',
+        lblValorTotalDaCompra: '#total-products',
+        lblValorDoFrete: '#shipping-fee',
+        lblTotalComFrete: '#total-with-shipping',
 
 
     }

@@ -2,6 +2,7 @@ import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 import aHome from "../../../support/pageobjects/action/aHome";
 import aMenu from "../../../support/pageobjects/action/aMenu";
 import aCarrinho from "../../../support/pageobjects/action/aCarrinho";
+import aCheckout from "../../../support/pageobjects/action/aCheckout";
 
 
 Given("que eu estou no site QA Commerce", () => {
@@ -43,5 +44,65 @@ And("o sistema deve exibir a valor total de {string}", (valor) => {
 
 And("o sistema deve exibir a quantidade {string}", (quantidade) => {
     aCarrinho.validaQuantidade(quantidade)
+})
+
+When("verifico total de produtos {string}", (valor) => {
+    aCarrinho.validaValorTotalDosProdutos(valor)
+})
+
+And("verifico o valor do frete {string}", (valor) => {
+    aCarrinho.validaValorDoFrete(valor)
+})
+
+And("verifico o valor total com frete {string}", (valor) => {
+    aCarrinho.validaValorTotalComFrete(valor)
+})
+
+Then("clico em Ir Para o Checkout",()=>{
+    aCarrinho.clicaIrParaCheckout()
+})
+
+When("preencho o nome {string}", (nome) =>{
+    aCheckout.preencherNome(nome)
+})
+
+And("preencho o sobrenome {string}", (sobrenome) =>{
+    aCheckout.preencherSobrenome(sobrenome)
+})
+
+And("preencho o endereço {string}", (endereco) =>{
+    aCheckout.preencherEndereco(endereco)
+})
+
+And("preencho o número {string}", (numero) =>{
+    aCheckout.preencherNumero(numero)
+})
+
+And("preencho o CEP {string}", (cep) =>{
+    aCheckout.preencherCep(cep)
+})
+
+And("preencho o telefone {string}", (tel) =>{
+    aCheckout.preencherTelefone(tel)
+})
+
+And("preencho o email {string}", (email) =>{
+    aCheckout.preencherEmail(email)
+})
+
+And("escolho a forma de pagamento Pix", () =>{
+    aCheckout.selecionarFormaDePagamentoPix()
+})
+
+And("marco que li os termos e condições", () =>{
+    aCheckout.marcarLiConcordoComTermos()
+})
+
+And("clico em Finalizar Pedido", () =>{
+    aCheckout.clicarEmFinalizarPedido()
+})
+
+Then("o sistema exibe a mensagem {string}", (mensagem) =>{
+    aCheckout.validarMensagem(mensagem)
 })
 
