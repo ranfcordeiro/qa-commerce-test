@@ -74,6 +74,7 @@ class checkout {
     }
 
     validarMensagem(mensagem){
+        cy.wait(1000)
         cy.get(eCheckout.labels.lblMensagem)
         .should('exist')
         .contains(mensagem)
