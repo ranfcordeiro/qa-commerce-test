@@ -1,7 +1,7 @@
 O projeto está separado em:<br>
 <br>
 support/pageobjects/action: Executa as ações de interação com a objetos da página<br>
-support/pageobjects/elements: Mapeia os objetos da página<br>
+support/pageobjects/elements: Mapeamento dos elementos da página<br>
 step_definition: contém pastas que vinculam as ações com o bdd<br>
 step_definition/*.feature: Cenários em bdd<br>
 <br>

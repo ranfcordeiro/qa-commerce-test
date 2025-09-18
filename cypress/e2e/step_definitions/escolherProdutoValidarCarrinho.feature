@@ -11,6 +11,29 @@ Then o sistema deve exibir a valor unitário de "Preço: R$59.00"
 And o sistema deve exibir a valor total de "Total: R$118.00"
 And o sistema deve exibir a quantidade "Quantidade: 2"
 
+
+
+Scenario: Validar Campos Obrigatórios no Checkout
+Given que eu estou no site QA Commerce
+When clico no menu Carrinho
+And verifico total de produtos "Valor total do(s) Produto(s): R$118.00"
+And verifico o valor do frete "Frete: R$19.90"
+And verifico o valor total com frete "Valor total + Frete fixo: R$137.90"
+Then clico em Ir Para o Checkout
+And clico em Finalizar Pedido
+Then o sistema exibe a mensagem de Campos Obrigatórios "Por favor, preencha todos os campos obrigatório marcados com asteriscos!"
+And o sistema Exibe a mensagem Nome Obrigatório "Este campo é obrigatório."
+And o sistema Exibe a mensagem Sobrenome Obrigatório "Este campo é obrigatório."
+And o sistema Exibe a mensagem Endereço Obrigatório "Este campo é obrigatório."
+And o sistema Exibe a mensagem Número Obrigatório "Este campo é obrigatório."
+And o sistema Exibe a mensagem CEP Obrigatório "Este campo é obrigatório."
+And o sistema Exibe a mensagem CEP Inválido "O CEP deve ter 8 caracteres."
+And o sistema Exibe a mensagem Email Obrigatório "Este campo é obrigatório."
+And o sistema Exibe a mensagem Email Inválido "Por favor, insira um email válido."
+And o sistema Exibe a mensagem Termos Obrigatórios "Este campo é obrigatório."
+
+
+
 Scenario: Realizar CheckOut Completo
 Given que eu estou no site QA Commerce
 When clico no menu Carrinho

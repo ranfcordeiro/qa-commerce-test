@@ -106,3 +106,44 @@ Then("o sistema exibe a mensagem {string}", (mensagem) =>{
     aCheckout.validarMensagem(mensagem)
 })
 
+Then("o sistema exibe a mensagem de Campos Obrigatórios {string}", (mensagem) =>{
+    aCheckout.validarMensagensCamposObrigatorios(mensagem)
+})
+
+And("o sistema Exibe a mensagem Nome Obrigatório {string}", (mensagem) =>{
+    aCheckout.validarMensagemNomeObrigatorio(mensagem)
+})
+
+And("o sistema Exibe a mensagem Sobrenome Obrigatório {string}", (mensagem) =>{
+    aCheckout.validarMensagemSobrenomeObrigatorio(mensagem)
+})
+
+And("o sistema Exibe a mensagem Endereço Obrigatório {string}", (mensagem) =>{
+    aCheckout.validarMensagemEnderecoObrigatorio(mensagem)
+})
+
+And("o sistema Exibe a mensagem Número Obrigatório {string}", (mensagem) =>{
+    aCheckout.validarMensagemNumeroObrigatorio(mensagem)
+})
+
+And("o sistema Exibe a mensagem CEP Obrigatório {string}", (mensagem) =>{
+    aCheckout.validarMensagemCepObrigatorio(mensagem)
+})
+
+And("o sistema Exibe a mensagem CEP Inválido {string}", (mensagem) =>{
+    aCheckout.validarMensagemCepValido(mensagem)
+})
+
+And("o sistema Exibe a mensagem Email Obrigatório {string}", (mensagem) =>{
+    aCheckout.validarMensagemEmailObrigatorio(mensagem)
+})
+
+And("o sistema Exibe a mensagem Email Inválido {string}", (mensagem) =>{
+    aCheckout.validarMensagemEmailValido(mensagem)
+})
+
+And("o sistema Exibe a mensagem Termos Obrigatórios {string}", (mensagem) =>{
+    aCheckout.validarMensagemTermosObrigatorios(mensagem)
+})
+
+

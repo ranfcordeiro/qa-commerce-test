@@ -67,6 +67,7 @@ class checkout {
     }
 
     clicarEmFinalizarPedido(){
+        cy.wait(1000)
         cy.get(eCheckout.botoes.btnFinalizarPedido)
         .should('exist')
         .click()
@@ -78,6 +79,54 @@ class checkout {
         .contains(mensagem)
     }
 
+    validarMensagensCamposObrigatorios(mensagem){
+        cy.get(eCheckout.labels.lblMensagemCamposObrigatorios)
+        .contains(mensagem)
+    }
 
+    validarMensagemNomeObrigatorio(mensagem){
+        cy.get(eCheckout.labels.lblNomeObrigatorio)
+        .contains(mensagem)
+    }
+
+    validarMensagemSobrenomeObrigatorio(mensagem){
+        cy.get(eCheckout.labels.lblSobrenomeObrigatorio)
+        .contains(mensagem)
+    }
+
+    validarMensagemEnderecoObrigatorio(mensagem){
+        cy.get(eCheckout.labels.lblEnderecoObrigatorio)
+        .contains(mensagem)
+    }
+
+    validarMensagemNumeroObrigatorio(mensagem){
+        cy.get(eCheckout.labels.lblNumeroObrigatorio)
+        .contains(mensagem)
+    }
+
+    validarMensagemCepObrigatorio(mensagem){
+        cy.get(eCheckout.labels.lblCepObrigatorio)
+        .contains(mensagem)
+    }
+
+    validarMensagemCepValido(mensagem){
+        cy.get(eCheckout.labels.lblCepQuantidadeDeDigitos)
+        .contains(mensagem)
+    }
+
+    validarMensagemEmailObrigatorio(mensagem){
+        cy.get(eCheckout.labels.lblEmailObrigatorio)
+        .contains(mensagem)
+    }
+
+    validarMensagemEmailValido(mensagem){
+        cy.get(eCheckout.labels.lblEmailValido)
+        .contains(mensagem)
+    }
+
+    validarMensagemTermosObrigatorios(mensagem){
+        cy.get(eCheckout.labels.lblTermosObrigatorios)
+        .contains(mensagem)
+    }
 }
 export default new checkout
