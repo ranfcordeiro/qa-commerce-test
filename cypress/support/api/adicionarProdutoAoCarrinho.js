@@ -20,7 +20,7 @@ class api {
 
     listarUsuarios() {
 
-        let carrinho = {
+        let user = {
             'method': 'GET',
             'url': 'http://localhost:3000/api-docs/#/default/get_users',
             failOnStatusCode: false,
@@ -28,13 +28,8 @@ class api {
                 'Content-Type': 'application/json',
 
             },
-            // body: {
-            //     "userId": idUsuario,
-            //     "productId": idProduto,
-            //     "quantity": quantidade
-            // }
         }
-        return carrinho
+        return user
     }
 };
 
