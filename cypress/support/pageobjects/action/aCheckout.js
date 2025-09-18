@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { eCheckout } from "../Elements/eCheckout"
+import { eCheckout } from "../elements/eCheckout"
 
 
 class checkout {
